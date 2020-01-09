@@ -1,1 +1,1 @@
-export const NO_AVAILABLE_BOX = 'Has no available box'
+export const NO_AVAILABLE_LOCKER = 'Has no available locker'

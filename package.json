@@ -2,7 +2,7 @@
   "name": "js-sample",
   "version": "1.0.0",
   "description": "locker demo",
-  "main": "src/lesson-2/index.js",
+  "main": "src/lesson-2/Locker.js",
   "scripts": {
     "lint": "eslint src",
     "test": "jest",
