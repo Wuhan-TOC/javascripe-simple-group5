@@ -49,3 +49,4 @@ private Booking hiddenBookImpl(Customer aCustomer, boolean isPremium) {...}
 -   取包
     -   Given: 拿到一个正确的Ticket，When: 取包的时候，Then：取包成功
     -   Given: 拿到一个错误的Ticket，When: 取包的时候，Then：取包失败
+-  按照顺序
