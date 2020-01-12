@@ -39,7 +39,8 @@
       "<rootDir>/**/*.test.js"
     ],
     "verbose": false,
-    "collectCoverage": false
+    "collectCoverage": false,
+    "testEnvironment": "node"
   },
   "prettier": {
     "printWidth": 80,
@@ -78,5 +79,8 @@
       "npm run lint -- --fix",
       "git add"
     ]
+  },
+  "dependencies": {
+    "lodash": "^4.17.15"
   }
 }
