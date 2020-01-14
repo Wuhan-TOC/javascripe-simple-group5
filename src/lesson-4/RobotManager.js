@@ -11,8 +11,6 @@ export default class RobotManager {
     }
 
     queryBestLocker() {
-        return _.maxBy(this.managers, (locker) => {
-            return locker.useRatio()
-        })
+        return _.maxBy(this.managers, (locker) => locker.useRatio())
     }
 }

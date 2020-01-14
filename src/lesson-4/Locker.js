@@ -5,7 +5,6 @@ import {
     TAKE_PACKAGE_FAILED,
     DEFAULT_LOCKER_NUMBER,
 } from './constant'
-import * as _ from 'lodash'
 
 export default class Locker {
     constructor(size, number) {

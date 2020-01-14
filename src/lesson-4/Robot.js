@@ -18,7 +18,9 @@ export default class Robot {
 
     savePackage() {
         let result = NO_AVAILABLE_LOCKER
-        this._findAvailableLocker()
+        if (!this._findAvailableLocker()) {
+            return NO_AVAILABLE_LOCKER
+        }
         const availableLocker = this._queryBestLocker()
         if (availableLocker) {
             result = availableLocker.savePackage()
@@ -27,8 +29,6 @@ export default class Robot {
     }
 
     _queryBestLocker() {
-        return _.maxBy(this.lockers, (locker) => {
-            return locker.useRatio()
-        })
+        return _.maxBy(this.lockers, (locker) => locker.useRatio())
     }
 }
