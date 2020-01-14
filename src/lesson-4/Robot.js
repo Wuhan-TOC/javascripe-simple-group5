@@ -1,5 +1,5 @@
 import Locker from './Locker'
-import { NO_AVAILABLE_LOCKER } from './constant'
+import { NO_AVAILABLE_LOCKER, TAKE_PACKAGE_FAILED } from './constant'
 import * as _ from 'lodash'
 
 const LOCKER_SIZE = 24
@@ -26,6 +26,22 @@ export default class Robot {
             result = availableLocker.savePackage()
         }
         return result
+    }
+
+    takePackage(ticket) {
+        let result = TAKE_PACKAGE_FAILED
+        const targetLocker = this._findAvailableLocker(ticket)
+        if (!targetLocker) {
+            result = targetLocker.takePackage(ticket)
+        }
+        return result
+    }
+
+    _findLockerByTicket(ticket) {
+        return _.findKey(
+            this.lockers,
+            (locker) => locker.lockerNumber === ticket.lockerNumber
+        )
     }
 
     _queryBestLocker() {
